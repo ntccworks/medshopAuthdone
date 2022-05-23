@@ -1,14 +1,42 @@
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>admin</title>
-</head>
-<body>
-<h3>Admin Login</h3>
-<form name="form1" method="post" action="adminPage.jsp">
-  <p>Username : <input type="text" name="adminUserName"> </p>
-  <p>Password : <input type="password" name="adminPassword"></p>
-  <p> <input type="submit" name="ADMINLOGIN" value="LOGIN"> </p>
-</form>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link  rel="stylesheet" type="text/css" href="login.css">
+      </head>
+  <body>
+    <div class="container ">
+      <div class="top-header">
+        <h3>Admin Portal</h3>
+        <p>Enter your credentials to access your account</p>
+      </div>
+      <form name="form1" method="post" action="adminPage.jsp">
+        <div class="user">
+          <i class="bx bxs-user-circle"></i>
+          <input type="text"  name="adminUserName" placeholder="Enter your username" />
+        </div>
+        <div class="pass">
+          <i class="bx bxs-lock-alt"></i>
+          <input type="password"  name="adminPassword" placeholder="Enter your password" />
+        </div>
+      </form>
+      <div class="btn">
+        <button type="submit" name="ADMINLOGIN">Login</button>
+      </div>
+    </div>
+    <script src="/app.js"></script>
+  </body>
 </html>

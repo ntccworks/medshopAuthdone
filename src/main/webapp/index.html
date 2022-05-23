@@ -1,126 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>homemed.com</title>
+  <title>Pharma</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Rubik:400,700|Crimson+Text:400,400i" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+
+  <link rel="stylesheet" href="css/aos.css">
+
+  <link rel="stylesheet" href="css/style.css">
+
 </head>
-<style>
-.mt-10{margin-top: 10px;}
-.mt-50{margin-top: 50px;}
-.callIcon{color:white; margin-top: 20px;}
-.whiteText{color:white;}
-.flex{
-display:flex;
-float:"left";
-justify-content: space-around;margin-top: 50px;}
-</style>
+
 <body>
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">Home med</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Medicines <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="babyCare.jsp">Baby care</a></li>
-            <li><a href="HealthProducts.jsp">Health Products</a></li>
-            <li><a href="genmed.html">Generic Medicines</a></li>
-          </ul>
-        </li>
-        <li><a href="DoctConst.jsp">Consult Doctors</a></li>
-      </ul>
-      <form class="navbar-form navbar-left" action="/action_page.php">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search" name="search">
-        <div class="input-group-btn">
-          <button class="btn btn-default" type="submit">
-            <i class="glyphicon glyphicon-search"></i>
-          </button>
+  <div class="site-wrap">
+
+
+    <div class="site-navbar py-2">
+
+      <div class="search-wrap">
+        <div class="container">
+          <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
+          <form action="#" method="post">
+            <input type="text" class="form-control" placeholder="Search keyword and hit enter...">
+          </form>
         </div>
       </div>
-    </form>
-  <div class="mt-10"><a href="view_cart.html"><button>View cart</button></a>
-      <ul class="nav navbar-nav navbar-right">
-      	<li class="whiteText"><i class='fa fa-phone callIcon'></i> Call us now </li>
-        <li><a href="sign_up.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<div class="container mt-50">
-  <!-- Add a background image -->
-<header id="home">
-  <div class="">
-  </div>
-  <div class="">
-    <span class="" style="font-size:100px">Get instant delivery with minimum cost</span>
-    <span class="" style="font-size:60px"><b><br> &nbsp; and<br>Discount</b><span><br>with 24/7 hrs service</span></span>
 
-  </div>
-</header>
-  <div class = 'flex'>
-  
-  <div class="card img-fluid" style="width:300px;height:300px">
-  	<a href = "babyCare.jsp">
-    <img class="card-img-top" src="https://images.indianexpress.com/2018/07/wp-baby-gettyimages-537424238.jpg" alt="Card image" style="width:300px;height:300px">
-    <span class="card-img-overlay">
-      Baby care
-    </span>
-    </a>
-  </div>
-  
-  <div class="card img-fluid" style="width:300px;height:300px">
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="logo">
+            <div class="site-logo">
+              <a href="index.html" class="js-logo-clone">Pharma</a>
+            </div>
+          </div>
+          <div class="main-nav d-none d-lg-block">
+            <nav class="site-navigation text-right text-md-center" role="navigation">
+              <ul class="site-menu js-clone-nav d-none d-lg-block">
+                <li><a href="index.html">Home</a></li>
+                <li class="has-children">
+                  <a href="#">Products</a>
+                  <ul class="dropdown">
+                    <li><a href="HealthProducts.html">Health Supplements</a></li>
+                    <li><a href="babyCare.html">Baby Care</a></li>
+                    <li><a href="genmed.html">Generic Medicine</a></li>
+                  </ul>
+                <li><a href="DoctConst.html">Consult Doctors</a></li>
+              </ul>
+            </nav>
+          </div>
+          
+        
+          <div class="buttons d-flex justify-content-between">
+            <div class="col-sm-6">
+              <a href="sign_up.html"><button class="btn btn-outline-primary btn-md btn-block">Sign Up</button></a>
+            </div>
+            <div class="col-sm-6">
+              <a href="Login.html"><button class="btn btn-outline-primary btn-md btn-block">Log In</button></a>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-light py-3 tracker">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-0" class="tracker">
+            <a class="text-black" href="index.html">Home / </a>
+            <strong style="color: white;">Cart</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-blocks-cover" style="background-image: url('images/bg.jpg');">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7 mx-auto order-lg-2 align-self-center">
+            <div class="site-block-cover-content text-center">
+              <h2 class="sub-title" style="color:black ;">Pharmacy at your doorstep</h2>
+              <h1 style="color:#125864;">Welcome To Pharma</h1>
+              <p>
+                <a href="#" class="btn btn-primary px-5 py-3">Shop Now</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="title-section text-center col-12">
+            <h2 class="text-uppercase py-3">Our Services</h2>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column justify-content-between align-items-center">
+            <div class="row d-flex justify-content-between">
+                <div class="col-md-3">
+                    <div class="card img-fluid" style="width:300px;height:300px">
+                        <a href = "babyCare.jsp">
+                      <img class="card-img-top" src="https://images.indianexpress.com/2018/07/wp-baby-gettyimages-537424238.jpg" alt="Card image" style="width:300px;height:300px">
+                      <span class="card-img-overlay text-dark">
+                        Baby care
+                      </span>
+                      </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card img-fluid" style="width:300px;height:300px">
+        
+                        <a href = "HealthProducts.jsp">
+                        <img class="card-img-top" src="https://5.imimg.com/data5/YF/EC/MY-30021521/herbal-wellness-products-500x500.jpg" alt="Card image" style="width:300px;height:300px">
+                        <span class="card-img-overlay text-dark">
+                          Health Supplements
+                        </span>
+                        </a>
+                      </div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-between">
+                <div class="col-md-3">
+                    <div class="card img-fluid" style="width:300px;height:300px">
+                        <a href = "genmed.html">
+                        <img class="card-img-top" src="https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2019/07/12/Pictures/ebola-drugs_95807052-a4a6-11e9-88eb-6879d27b9db7.jpg" alt="Card image" style="width:300px;height:300px">
+                        <span class="card-img-overlay text-dark">
+                         Generic Medicines
+                        </span>
+                        </a>
+                      </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card img-fluid" style="width:300px;height:300px">
+                        <a href = "DoctConst.jsp">
+                          <img class="card-img-top" src="https://images.theconversation.com/files/304957/original/file-20191203-66986-im7o5.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop" alt="Card image" style="width:300px;height:300px">
+                          <span class="card-img-overlay text-dark">
+                           <b>Doctor Consultation</b>
+                          </span>
+                          </a>
+                        </div>
+                </div>
+            </div>
+        </div>
+        
+      </div>
+    </div>
+    </div>
+
     
-    <a href = "HealthProducts.jsp">
-    <img class="card-img-top" src="https://5.imimg.com/data5/YF/EC/MY-30021521/herbal-wellness-products-500x500.jpg" alt="Card image" style="width:300px;height:300px">
-    <span class="card-img-overlay">
-      Health products
-    </span>
-    </a>
-  </div>
-  <div class="card img-fluid" style="width:300px;height:300px">
-    <a href = "genmed.html">
-    <img class="card-img-top" src="https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2019/07/12/Pictures/ebola-drugs_95807052-a4a6-11e9-88eb-6879d27b9db7.jpg" alt="Card image" style="width:300px;height:300px">
-    <span class="card-img-overlay">
-     Generic medicines
-    </span>
-    </a>
-  </div>
-  <div class="card img-fluid" style="width:300px;height:300px">
-  <a href = "DoctConst.jsp">
-    <img class="card-img-top" src="https://images.theconversation.com/files/304957/original/file-20191203-66986-im7o5.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop" alt="Card image" style="width:300px;height:300px">
-    <span class="card-img-overlay">
-     Doctor Consultation
-    </span>
-    </a>
-  </div>
-  </div>
+    </div>
+    <div class="site-section bg-secondary bg-image" style="background-image: url('images/bg_2.jpg');">
+      <div class="container">
+        <div class="row align-items-stretch">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <a href="#" class="banner-1 h-100 d-flex" style="background-image: url('images/bg_1.jpg');">
+              <div class="banner-1-inner align-self-center">
+                <h2>Pharma Products</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae ex ad minus rem odio voluptatem.
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <a href="#" class="banner-1 h-100 d-flex" style="background-image: url('images/bg_2.jpg');">
+              <div class="banner-1-inner ml-auto  align-self-center">
+                <h2>Rated by Experts</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae ex ad minus rem odio voluptatem.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
   
-  <footer class="container-fluid text-center" style="margin-top: 50px;">
-  <p>Home Med Copyright</p>  
-  <form class="form-inline">Get deals:
-    <input type="email" class="form-control" size="50" placeholder="Email Address">
-    <button type="button" class="btn btn-danger">Email</button>
-    Add footer
-  </form>
-</footer>
-</div>
+              <div class="block-7">
+                <h3 class="footer-heading mb-4">About Us</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quae reiciendis distinctio voluptates
+                  sed dolorum excepturi iure eaque, aut unde.</p>
+              </div>
+  
+            </div>
+            <div class="col-lg-3 mx-auto mb-5 mb-lg-0">
+              <h3 class="footer-heading mb-4">Quick Links</h3>
+              <ul class="list-unstyled">
+                <li><a href="#">Health Supplements</a></li>
+                <li><a href="#">Doctor Consultation</a></li>
+                <li><a href="#">Baby Care</a></li>
+                <li><a href="#">Medicines</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-md-6 col-lg-3">
+              <div class="block-5 mb-5">
+                <h3 class="footer-heading mb-4">Contact Info</h3>
+                <ul class="list-unstyled">
+                  <li class="address">Fake St. Amity</li>
+                  <li class="phone"><a href="tel://23923929210">3929210</a></li>
+                  <li class="email">emailaddress@domain.com</li>
+                </ul>
+              </div>
+  
+  
+            </div>
+          </div>
+        </div>
+      </footer>
+  </div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+
+  <script src="js/main.js"></script>
 
 </body>
+
 </html>

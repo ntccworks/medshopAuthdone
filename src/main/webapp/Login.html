@@ -1,16 +1,44 @@
-<html>
-<head>
-<title> LOGIN PAGE </title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-</head>
-<body>
-<h2>Login</h2>
-<form name="form1" method="post" action="validation.jsp">
-  <p>Username : <input type="text" name="text1"> </p>
-  <p>Password : <input type="password" name="text2"></p>
-  <p> <input type="submit" name="LOGIN" value="LOGIN"> </p>
-  <p> Don't have an account? <a href ="sign_up.html"> Create new account</a> </p>
-  <p> <a href ="adminLogin.html"> Login as an admin </a> </p>
-</form>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link  rel="stylesheet" type="text/css" href="login.css">
+      </head>
+  <body>
+    <div class="container ">
+      <div class="top-header">
+        <h3>Welcome back!</h3>
+        <p>Enter your credentials to access your account</p>
+      </div>
+      <form action="login.jsp" method = "post">
+        <div class="user">
+          <i class="bx bxs-user-circle"></i>
+          <input type="text" name ="loginusername" placeholder="Enter your username" />
+        </div>
+        <div class="pass">
+          <i class="bx bxs-lock-alt"></i>
+          <input type="password" name="loginPassword" placeholder="Enter your password" />
+        </div>
+        <div class="btn">
+        <input type ="submit" value = "Login">
+      </div>
+      </form>
+      
+    </div>
+    <p class="last">Login as <a href="adminLogin.html"> Admin </a></p>
+    <p class="last">Don't have an account? <a href="sign_up.html"> Sign Up </a></p>
+  </body>
 </html>

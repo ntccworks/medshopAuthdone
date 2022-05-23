@@ -1,85 +1,245 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<title> Generic medicines </title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <title>Generic Medicines</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Rubik:400,700|Crimson+Text:400,400i" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+
+  <link rel="stylesheet" href="css/aos.css">
+
+  <link rel="stylesheet" href="css/style.css">
+
 </head>
+
 <body>
-<p align="center"> <b><i>Generic medicines</i> </b> </p>
-<form> 
-<p> <center><input type="text" name="search" placeholder="Search for your medicine"></center></p>
-</form>
-<table border="1" 
-           cellpadding="15">
-<th>
-<td> Generic Name </td>
-<td> Brand Name </td>
-<td> Price </td>
-<td> Qty. </td>
-<td> Select item </td>
-</th>
-<tr>
-<td> 1. </td>
-<td> alprazolam </td>
-<td> Xanax </td>
-<td> Rs. </td>
-<td> 
-<select id="qty" name="qty">
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
-</select> </td>
-<td> <input type="button" name="add1" value="Add to Cart"> </td>
-</tr>
-<tr>
-<td> 2. </td>
-<td> atorvastatin </td>
-<td> Lipitor </td>
-<td> Rs. </td>
-<td> 
-<select id="qty" name="qty">
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
-</select>
-</td>
-<td> <input type="button" name="add2" value="Add to Cart"> </td>
-</tr>
-<tr>
-<td> 3. </td>
-<td> cetirizine HCl tablet - OTC </td>
-<td> Zyrtec OTC </td>
-<td> Rs. </td>
-<td> 
-<select id="qty" name="qty">
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
-</select>
-</td>
-<td> <input type="button" name="add3" value="Add to Cart"> </td>
-</tr>
-<tr>
-<td> 4. </td>
-<td> glimepiride </td>
-<td> Amaryl </td>
-<td> Rs. </td>
-<td> 
-<select id="qty" name="qty">
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
-</select>
-</td>
-<td> <input type="button" name="add4" value="Add to Cart"> </td>
-</tr>
-</table>
+
+  <div class="site-wrap">
+
+
+    <div class="site-navbar py-2">
+
+      <div class="search-wrap">
+        <div class="container">
+          <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
+          <form action="#" method="post">
+            <input type="text" class="form-control" placeholder="Search keyword and hit enter...">
+          </form>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="logo">
+            <div class="site-logo">
+              <a href="index.html" class="js-logo-clone">Pharma</a>
+            </div>
+          </div>
+          <div class="main-nav d-none d-lg-block">
+            <nav class="site-navigation text-right text-md-center" role="navigation">
+              <ul class="site-menu js-clone-nav d-none d-lg-block">
+                <li><a href="index.html">Home</a></li>
+                <li class="has-children">
+                  <a href="#">Products</a>
+                  <ul class="dropdown">
+                    <li><a href="HealthProducts.html">Health Supplements</a></li>
+                    <li><a href="babyCare.html">Baby Care</a></li>
+                    <li><a href="genmed.html">Generic Medicine</a></li>
+                  </ul>
+                <li><a href="DoctConst.html">Consult Doctors</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="icons">
+            <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
+            <a href="view_cart.html" class="icons-btn d-inline-block bag">
+              <span class="icon-shopping-bag"></span>
+              <span class="number">2</span>
+            </a>
+            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span
+                class="icon-menu"></span></a>
+          </div>
+          <div class="buttons d-flex justify-content-between">
+            <div class="col-sm-6">
+              <a href="sign_up.html"><button class="btn btn-outline-primary btn-md btn-block">Sign Up</button></a>
+            </div>
+            <div class="col-sm-6">
+              <a href="Login.html"><button class="btn btn-outline-primary btn-md btn-block">Log In</button></a>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-light py-3 tracker">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-0" class="tracker">
+            <a class="text-black" href="index.html">Home / </a>
+            <strong style="color: white;">Generic Medicines</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        
+        <div class="row">
+          <div class="col-lg-6">
+            <h3 class="mb-3 h6 text-uppercase text-black d-block">Filter by Reference</h3>
+            <button type="button" class="btn btn-secondary btn-md dropdown-toggle px-4" id="dropdownMenuReference"
+              data-toggle="dropdown">Reference</button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+              <a class="dropdown-item" href="#">Relevance</a>
+              <a class="dropdown-item" href="#">Name, A to Z</a>
+              <a class="dropdown-item" href="#">Name, Z to A</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Price, low to high</a>
+              <a class="dropdown-item" href="#">Price, high to low</a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="row">
+          <div class="col-sm-6 col-lg-4 text-center item mb-4">
+            <span class="tag">Sale</span>
+            <a href="shop-single.html"> <img class="product-img" src="https://5.imimg.com/data5/SELLER/Default/2021/7/IG/YS/SL/2218597/paracetamol-tablets-ip-500x500.jpg" alt="Image product-img"></a>
+            <h3 class="text-dark product-name"><a href="shop-single.html">Paracetamol-500</a></h3>
+            <p class="price"><del>95.00</del> &mdash; Rs. 55.00</p>
+          </div>
+          <div class="col-sm-6 col-lg-4 text-center item mb-4">
+            <a href="shop-single.html"> <img src="images/product_02.png" class="product-img" alt="Image product-img"></a>
+            <h3 class="text-dark product-name"><a href="shop-single.html">Chanca Piedra</a></h3>
+            <p class="price">Rs. 70.00</p>
+          </div>
+          <div class="col-sm-6 col-lg-4 text-center item mb-4">
+            <a href="shop-single.html"> <img src="images/product_03.png" class="product-img" alt="Image product-img"></a>
+            <h3 class="text-dark product-name"><a href="shop-single.html">Umcka Cold Care</a></h3>
+            <p class="price">Rs. 120.00</p>
+          </div>
+    
+          <div class="col-sm-6 col-lg-4 text-center item mb-4">
+    
+            <a href="shop-single.html"> <img src="images/product_04.png" alt="Image product-img" class="product-img"></a>
+            <h3 class="text-dark product-name"><a href="shop-single.html">Cetyl Pure</a></h3>
+            <p class="price"><del>45.00</del> &mdash; Rs. 20.00</p>
+          </div>
+          <div class="col-sm-6 col-lg-4 text-center item mb-4">
+            <a href="shop-single.html"> <img src="images/product_05.png" class="product-img" alt="Image product-img"></a>
+            <h3 class="text-dark product-name"><a href="shop-single.html">CLA Core</a></h3>
+            <p class="price">Rs. 38.00</p>
+          </div>
+          <div class="col-sm-6 col-lg-4 text-center item mb-4">
+            <span class="tag">Sale</span>
+            <a href="shop-single.html"> <img src="https://res.retailershakti.com/incom/images/product/small/Doctor-PAN-D-1639380772-10090945-1.jpg" alt="Image product-img" class="product-img"></a>
+            <h3 class="text-dark product-name"><a href="shop-single.html">Pan-D</a></h3>
+            <p class="price"><del>Rs. 89</del> &mdash; Rs. 38.00</p>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-12 text-center">
+            <div class="site-block-27">
+              <ul>
+                <li><a href="#">&lt;</a></li>
+                <li class="active"><span>1</span></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&gt;</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="site-section bg-secondary bg-image" style="background-image: url('images/bg_2.jpg');">
+      <div class="container">
+        <div class="row align-items-stretch">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <a href="#" class="banner-1 h-100 d-flex" style="background-image: url('images/bg_1.jpg');">
+              <div class="banner-1-inner align-self-center">
+                <h2>Pharma Products</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae ex ad minus rem odio voluptatem.
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <a href="#" class="banner-1 h-100 d-flex" style="background-image: url('images/bg_2.jpg');">
+              <div class="banner-1-inner ml-auto  align-self-center">
+                <h2>Rated by Experts</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae ex ad minus rem odio voluptatem.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+
+            <div class="block-7">
+              <h3 class="footer-heading mb-4">About Us</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quae reiciendis distinctio voluptates
+                sed dolorum excepturi iure eaque, aut unde.</p>
+            </div>
+
+          </div>
+          <div class="col-lg-3 mx-auto mb-5 mb-lg-0">
+            <h3 class="footer-heading mb-4">Quick Links</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">Health Supplements</a></li>
+              <li><a href="#">Doctor Consultation</a></li>
+              <li><a href="#">Baby Care</a></li>
+              <li><a href="#">Medicines</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="block-5 mb-5">
+              <h3 class="footer-heading mb-4">Contact Info</h3>
+              <ul class="list-unstyled">
+                <li class="address">Fake St. Amity</li>
+                <li class="phone"><a href="tel://23923929210">3929210</a></li>
+                <li class="email">emailaddress@domain.com</li>
+              </ul>
+            </div>
+        </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+
+  <script src="js/main.js"></script>
+
 </body>
+
 </html>

@@ -21,22 +21,32 @@
     <div class="container ">
       <div class="top-header">
         <h3>Admin Portal</h3>
-        <p>Enter your credentials to access your account</p>
+        <small id ="warning" style="color:red"></small>
       </div>
-      <form name="form1" method="post" action="adminPage.jsp">
+      
         <div class="user">
           <i class="bx bxs-user-circle"></i>
-          <input type="text"  name="adminUserName" placeholder="Enter your username" />
+          <input type="text" id="adminUserName" name="adminUserName" placeholder="Enter your username" required/>
         </div>
         <div class="pass">
           <i class="bx bxs-lock-alt"></i>
-          <input type="password"  name="adminPassword" placeholder="Enter your password" />
+          <input type="password" id="adminPassword" name="adminPassword" placeholder="Enter your password" required/>
         </div>
-      </form>
-      <div class="btn">
-        <button type="submit" name="ADMINLOGIN">Login</button>
+        <div class="btn">
+        <button type="button" name="ADMINLOGIN" onclick="adminAccess()">Login</button>
+        <br>
+        
       </div>
+     
+      <script type="text/javascript">
+      function adminAccess(){
+    	  if (document.getElementById("adminUserName").value == "admin" && document.getElementById("adminPassword").value == "123"){
+    		  window.location.href = "adminPage.jsp";
+    	  }else{
+    		  document.getElementById("warning").innerHTML = "Invalid admin credentials";
+    	  }
+      }
+      </script>
     </div>
-    <script src="/app.js"></script>
   </body>
 </html>

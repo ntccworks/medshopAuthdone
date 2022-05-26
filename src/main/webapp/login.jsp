@@ -23,7 +23,7 @@ if (!loginName.isEmpty() && !loginPassword.isEmpty() ){
 	}
 	}
 	if(flag==0)
-		response.sendRedirect("login.html");
+		response.sendRedirect("Login.html");
 	else{
 		session.setAttribute("session-user", loginName);
 		response.sendRedirect("authenticatedhome.jsp");

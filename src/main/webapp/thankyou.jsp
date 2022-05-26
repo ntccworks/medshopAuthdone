@@ -1,3 +1,4 @@
+<%@include file="dbconnection.jsp" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +24,13 @@
 </head>
 
 <body>
+<%
+PreparedStatement ps=conn.prepareStatement("update medshopuser set payment=? where name='"+session.getAttribute("session-user")+"'");
+ps.setInt(1,Integer.parseInt(request.getParameter("totalcp")));
+ps.executeUpdate();
+conn.close();
 
+%>
   <div class="site-wrap">
 
 
@@ -75,7 +82,7 @@
           </div>
           <div class="icons">
             <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
-            <a href="cart.html" class="icons-btn d-inline-block bag">
+            <a href="view_cart.html" class="icons-btn d-inline-block bag">
               <span class="icon-shopping-bag"></span>
               <span class="number">2</span>
             </a>
@@ -85,7 +92,6 @@
         </div>
       </div>
     </div>
-
        <div class="bg-light py-3 tracker">
       <div class="container">
         <div class="row">
@@ -104,7 +110,7 @@
             <span class="icon-check_circle display-3 text-success"></span>
             <h2 class="display-3 text-black">Thank you!</h2>
             <p class="lead mb-5">You order was successfuly completed.</p>
-            <p><a href="shop.html" class="btn btn-md height-auto px-4 py-3 btn-primary">Back to store</a></p>
+            <p><a href="logout.jsp" class="btn btn-md height-auto px-4 py-3 btn-primary">Logout</a></p>
           </div>
         </div>
       </div>

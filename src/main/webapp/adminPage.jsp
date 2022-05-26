@@ -4,6 +4,9 @@
 <title>admin/addproducts</title>
 </head>
 <body>
+<%
+
+%>
 <h1>Welcome to the admin page</h1>
 
 <div class="container tm-mt-big tm-mb-big">

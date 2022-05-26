@@ -32,11 +32,12 @@
 	 			}
 	 			if (flag == 0){
 	 				try{
-		 				 PreparedStatement pst=conn.prepareStatement("insert into MEDSHOPUSER values(?,?,?,?)");
+		 				 PreparedStatement pst=conn.prepareStatement("insert into MEDSHOPUSER values(?,?,?,?,?)");
 		 				 pst.setString(1,username);
 		 				 pst.setString(2,email); 
 		 				 pst.setString(3,password);
-		 				 pst.setString(4,"none");
+		 				 pst.setInt(4, 1);
+		 				 pst.setInt(5, 0);
 		 				 int t=pst.executeUpdate();
 		 				 if(t>0){
 		 					response.sendRedirect("Login.html");
@@ -44,7 +45,7 @@
 		 				 conn.close();
 		 			 }
 		 			 catch (SQLException e){
-		 				 out.println("Prepared statement problem");
+		 				 out.println("Prepared statement problem "+ e);
 		 			 }
 	 			}else if (flag == 1){
 	 				out.println("Please change your email id or username");
@@ -53,6 +54,8 @@
 	 		 }else{
 	 			 out.println("Passwords do not match");
 	 		 }
+	 	 }else{
+	 		 out.print("<strong style = \"color:red\">Failed to create an account. Please fill up all the details <a  href = \"sign_up.html\"> here </a>!</strong>");
 	 	 }
 	%>
 </body>

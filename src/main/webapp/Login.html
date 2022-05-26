@@ -26,19 +26,19 @@
       <form action="login.jsp" method = "post">
         <div class="user">
           <i class="bx bxs-user-circle"></i>
-          <input type="text" name ="loginusername" placeholder="Enter your username" />
+          <input type="text" name ="loginusername" placeholder="Enter your username" required/>
         </div>
         <div class="pass">
           <i class="bx bxs-lock-alt"></i>
-          <input type="password" name="loginPassword" placeholder="Enter your password" />
+          <input type="password" name="loginPassword" placeholder="Enter your password" required/>
         </div>
         <div class="btn">
-        <input type ="submit" value = "Login">
+        <button type ="submit">Log in</button>
       </div>
       </form>
       
     </div>
-    <p class="last">Login as <a href="adminLogin.html"> Admin </a></p>
+    <p class="last">Login as <a href="adminLogin.jsp"> Admin </a></p>
     <p class="last">Don't have an account? <a href="sign_up.html"> Sign Up </a></p>
   </body>
 </html>

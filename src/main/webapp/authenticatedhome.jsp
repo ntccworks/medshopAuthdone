@@ -63,7 +63,7 @@
           
           <div class="icons">
             <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
-            <a href="view_cart.html" class="icons-btn d-inline-block bag">
+            <a href="view_cart.jsp" class="icons-btn d-inline-block bag">
               <span class="icon-shopping-bag"></span>
               <span class="number">2</span>
             </a>
@@ -96,7 +96,7 @@
         <div class="row">
           <div class="col-lg-7 mx-auto order-lg-2 align-self-center">
             <div class="site-block-cover-content text-center">
-              <h2 class="sub-title" style="color:black ;">Pharmacy at your doorstep</h2>
+            <h3 style="color:black;">Hi, <%out.println(session.getAttribute("session-user")); %></h3>
               <h1 style="color:#125864;">Welcome To Pharma</h1>
               <p>
                 <a href="#" class="btn btn-primary px-5 py-3">Shop Now</a>

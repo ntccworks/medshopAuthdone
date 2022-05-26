@@ -1,3 +1,8 @@
+<%@page import="org.eclipse.jdt.internal.compiler.parser.ParserBasicInformation"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+     <%@include file = "dbconnection.jsp" %>
+    
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +28,8 @@
 </head>
 
 <body>
-
+<%! int cost;
+int totalCost;%>
   <div class="site-wrap">
 
 
@@ -69,14 +75,7 @@
             <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span
                 class="icon-menu"></span></a>
           </div>
-          <div class="buttons d-flex justify-content-between">
-            <div class="col-sm-6">
-              <a href="sign_up.html"><button class="btn btn-outline-primary btn-md btn-block">Sign Up</button></a>
-            </div>
-            <div class="col-sm-6">
-              <a href="Login.html"><button class="btn btn-outline-primary btn-md btn-block">Log In</button></a>
-            </div>
-          </div>
+          
           </div>
         </div>
       </div>
@@ -86,7 +85,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 mb-0" class="tracker">
-            <a class="text-black" href="index.html">Home / </a>
+            <a class="text-black" href="authenticatedhome.jsp">Home / </a>
             <strong style="color: white;">Cart</strong>
           </div>
         </div>
@@ -110,53 +109,52 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td class="product-thumbnail">
-                      <img src="images/product_02.png" alt="Image" class="img-fluid">
-                    </td>
-                    <td class="product-name">
-                      <h2 class="h5 text-black">Ibuprofen</h2>
-                    </td>
-                    <td>$55.00</td>
-                    <td>
-                      <div class="input-group mb-3" style="max-width: 120px;">
-                        <div class="input-group-prepend">
-                          <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
-                        </div>
-                        <input type="text" class="form-control text-center" value="1" placeholder=""
-                          aria-label="Example text with button addon" aria-describedby="button-addon1">
-                        <div class="input-group-append">
-                          <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
-                        </div>
-                      </div>
-    
-                    </td>
-                    <td>$49.00</td>
-                    <td><a href="#" class="btn height-auto btn-sm"><img src="https://cdn-icons-png.flaticon.com/512/3096/3096687.png" class="deleteIcon"></a></td>
-                  </tr>
-    
+                  
                   <tr>
                     <td class="product-thumbnail">
                       <img src="images/product_01.png" alt="Image" class="img-fluid">
                     </td>
                     <td class="product-name">
-                      <h2 class="h5 text-black">Bioderma</h2>
+                      <h2 class="h5 text-black">
+                      <%
+                      Statement st=conn.createStatement();
+
+      	 			ResultSet rs=st.executeQuery("select mp.name from MEDPRODUCTS mp, medshopuser muser where mp.pid = muser.pid and muser.name = '"+session.getAttribute("session-user")+"'");
+      	 			while(rs.next()){
+      	 				out.print(rs.getString(1));
+      	 			}
+                      %></h2>
                     </td>
-                    <td>$49.00</td>
+                    <td><%
+                      Statement st1=conn.createStatement();
+
+      	 			ResultSet rs1=st1.executeQuery("select mp.price from MEDPRODUCTS mp, medshopuser muser where mp.pid = muser.pid and muser.name = '"+session.getAttribute("session-user")+"'");
+      	 			while(rs1.next()){
+      	 				cost = Integer.parseInt(rs1.getString(1));
+      	 				out.print("<p id=\"cost\">"+cost+"</p>");
+      	 			}
+                      %></td>
                     <td>
-                      <div class="input-group mb-3" style="max-width: 120px;">
-                        <div class="input-group-prepend">
-                          <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
-                        </div>
-                        <input type="text" class="form-control text-center" value="1" placeholder=""
+
+					<input type="text" id="inputqty" class="form-control text-center" value="1" placeholder="" name="addedqty"
                           aria-label="Example text with button addon" aria-describedby="button-addon1">
-                        <div class="input-group-append">
-                          <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
-                        </div>
-                      </div>
+                    <button type="button" onclick="updateqty()" >Add</button>  
     
                     </td>
-                    <td>$49.00</td>
+                    <td> 
+                    <p id ="putcost">
+                    <% out.print(cost); %>
+                    </p>
+                     <script type="text/javascript">
+                     function updateqty(){
+                    	 var qty = document.getElementById("inputqty").value;
+                    	 document.getElementById("putcost").innerHTML = parseInt(document.getElementById("cost").innerText)*parseInt(qty);
+                         document.getElementById("total").innerHTML = parseInt(document.getElementById("cost").innerText)*parseInt(qty);
+						sessionStorage.setItem("totalCost",parseInt(document.getElementById("cost").innerText)*parseInt(qty) );
+                     }
+                     
+                     </script>
+                     </td>
                     <td><a href="#" class="btn height-auto btn-sm"><img src="https://cdn-icons-png.flaticon.com/512/3096/3096687.png" class="deleteIcon"></a></td>
                   </tr>
                 </tbody>
@@ -198,24 +196,19 @@
                 </div>
                 <div class="row mb-3">
                   <div class="col-md-6">
-                    <span class="text-black">Subtotal</span>
+                    <spanclass="text-black">Total</span>
                   </div>
                   <div class="col-md-6 text-right">
-                    <strong class="text-black">$230.00</strong>
+                    <strong id ="total"  class="text-black">
+                    <%out.print(cost);
+                     %></strong>
                   </div>
                 </div>
-                <div class="row mb-5">
-                  <div class="col-md-6">
-                    <span class="text-black">Total</span>
-                  </div>
-                  <div class="col-md-6 text-right">
-                    <strong class="text-black">$230.00</strong>
-                  </div>
-                </div>
+                
     
                 <div class="row">
                   <div class="col-md-12">
-                    <button class="btn btn-primary btn-lg btn-block" onclick="window.location='payment.html'">Proceed To
+                    <button class="btn btn-primary btn-lg btn-block" onclick="window.location='payment.jsp'">Proceed To
                       Checkout</button>
                   </div>
                 </div>

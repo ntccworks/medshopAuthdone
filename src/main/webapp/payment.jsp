@@ -1,3 +1,4 @@
+<%@ include file="dbconnection.jsp"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,14 +70,7 @@
             <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span
                 class="icon-menu"></span></a>
           </div>
-          <div class="buttons d-flex justify-content-between">
-            <div class="col-sm-6">
-              <a href="sign_up.html"><button class="btn btn-outline-primary btn-md btn-block">Sign Up</button></a>
-            </div>
-            <div class="col-sm-6">
-              <a href="Login.html"><button class="btn btn-outline-primary btn-md btn-block">Log In</button></a>
-            </div>
-          </div>
+          
           </div>
         </div>
       </div>
@@ -294,20 +288,20 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td>Paracetamol <strong class="mx-2">x</strong> 1</td>
-                        <td>₹55.00</td>
-                      </tr>
-                      <tr>
-                        <td>Ibuprofeen <strong class="mx-2">x</strong> 1</td>
-                        <td>₹45.00</td>
-                      </tr>
-                      <tr>
-                        <td class="text-black font-weight-bold"><strong>Cart Subtotal</strong></td>
-                        <td class="text-black">₹350.00</td>
-                      </tr>
-                      <tr>
-                        <td class="text-black font-weight-bold"><strong>Order Total</strong></td>
-                        <td class="text-black font-weight-bold"><strong>₹350.00</strong></td>
+                        <td><%
+                      Statement st=conn.createStatement();
+
+      	 			ResultSet rs=st.executeQuery("select mp.name from MEDPRODUCTS mp, medshopuser muser where mp.pid = muser.pid and muser.name = '"+session.getAttribute("session-user")+"'");
+      	 			while(rs.next()){
+      	 				out.print(rs.getString(1));
+      	 			}
+                      %></td>
+                        <td>Rs.<form action = "thankyou.jsp" method ="post"> <input name="totalcp" id ="totalcp" >
+                        <script type="text/javascript">
+                        window.onload = function(e){
+                        	document.getElementById("totalcp").value = sessionStorage.getItem("totalCost");
+                        } </script>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
@@ -349,10 +343,10 @@
                   </div>
     
                   <div class="form-group">
-                    <button class="btn btn-primary btn-lg btn-block" onclick="window.location='thankyou.html'">Place
+                    <button class="btn btn-primary btn-lg btn-block" type = "submit">Place
                       Order</button>
                   </div>
-    
+    </form>
                 </div>
               </div>
             </div>
@@ -426,6 +420,7 @@
         </div>
       </div>
     </footer>
+    
   </div>
 
   <script src="js/jquery-3.3.1.min.js"></script>
